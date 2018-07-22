@@ -12,8 +12,7 @@ def testpass(cryptpass):
         word = word.strip('\n')
         print 'word: ' + word
         cryptword = crypt.crypt(word, salt)
-        print 'cryptword: ' + cryptword
-        print type(cryptword)
+        print cryptword + ' == ' + cryptpass
         if cryptpass == cryptword:
             print '[+] Found Password: ' + word + '\n'
             return
